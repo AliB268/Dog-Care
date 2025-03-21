@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="dogs.css">
 </head>
 <body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <header>
         <h1 class="logo">Welcome to Doggy Day Care</h1>
         <nav>
@@ -22,7 +25,7 @@
         </nav>
     </header>
 
-    <h2>Taking Care of Your Fur-Baby</h2>
+    <h1>Taking Care of Your Fur-Baby</h1>
     <div class="image-container">
         <img src="OIP (1).jpg" alt="Vets love their patients!" width="500" height="600">
         <img src="OIP (3).jpg" alt="Happy fur patient with the Vet."  width="500" height="600">
@@ -50,7 +53,7 @@
             <img src="IMG_9897.jpg" alt="Marz and Bruno running free." width="400" height="400">
         </div>
  <section id="multimedia">
-            <h3>Adoption</h3>
+            <h1>Adoption</h1>
             <p>
                 <b>"Select"</b> is defined in the dictionary by such phrases as <b> "a preferred choice"</b> or <b> "carefully 
                 chosen"</b>. Selecting the family dog should be a well-researched and carefully soul-searched 
@@ -81,5 +84,28 @@
     <footer>
         <p>&copy; 2025 A Dog's Life. All rights reserved.</p>
     </footer>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </body>
 </html>
