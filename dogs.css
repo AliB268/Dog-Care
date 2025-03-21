@@ -1,178 +1,184 @@
-/* Base Reset */
-* {
+/*===========================
+  General Styles
+  =========================== */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: var(--page-bg-color, #f8f9fa); /* Placeholder for background color */
+    color: var(--text-color, #333); /* Placeholder for text color */
 }
 
-/* Center all headings */
-h1, h2, h3, h4, h5, h6 {
+header {
+    background-color: var(--header-bg-color, #007bff); /* Placeholder for header color */
+    color: var(--header-text-color, white);
+    padding: 20px;
     text-align: center;
-    margin: 20px 0;
+    position: relative;
 }
 
-/* Horizontal Navigation */
 nav ul {
-    list-style: none;         /* Remove bullet points */
-    display: flex;            /* Make list items horizontal */
-    justify-content: center;  /* Center the items horizontally */
-    gap: 20px;                /* Space between menu items */
+    list-style: none;
     padding: 0;
-    margin: 0;
-    background-color: #eee;   /* Optional: Light background for nav area */
-}
-
-nav li {
-    padding: 10px;
-}
-
-nav a {
-    text-decoration: none; 
-    color: #333;             /* Text color for links */
-    font-weight: bold;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: #007acc;          /* Hover color for links */
-}
-
-/* Image Container: place images horizontally */
-.image-container {
-    display: flex;           /* Flex layout */
-    justify-content: center; /* Center images horizontally */
-    flex-wrap: wrap;         /* Allow wrapping on smaller screens */
-    gap: 20px;               /* Space between images */
-    margin: 20px 0;
-}
-
-.image-container img {
-    max-width: 100%;         /* Responsive images */
-    height: auto; 
-    display: block;          /* Remove extra spacing below images */
-}
-
-/* Multimedia Section: horizontal layout for videos */
-#multimedia {
-    display: flex; 
-    justify-content: center; /* Center video elements horizontally */
-    flex-wrap: wrap;         /* Wrap if multiple videos appear */
-    gap: 20px;               /* Space between videos */
-    margin: 20px 0;
-}
-
-#multimedia iframe {
-    max-width: 100%;         /* Scale down on smaller screens */
-    height: auto;
-}
-
-p {
-margin-bottom:15px;
-margin-top:15px;
-}
-
-
-/* Footer */
-footer {
     text-align: center;
-    margin: 20px 0;
-    font-size: 0.9rem;
-    color: #555;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-link-color, white);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--nav-hover-color, #ffc107);
 }
 
 /*===========================
-  FAQ Section Styles
+  Content Styling
   =========================== */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-#faq-container {
-    max-width: 600px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 15px;
+h1, h2, h3 {
+    color: var(--heading-color, #222);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.faq {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+/*===========================
+  Forms
+  =========================== */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(#d4682e, #ccc);
+    border-radius: 4px;
 }
 
-.question {
-    font-weight: bold;
-    cursor: pointer;
-    background: #007bff;
+input[type="submit"] {
+    background-color: var(--button-bg-color, #28a745);
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.question:hover {
-    background: #0056b3;
+input[type="submit"]:hover {
+    background-color: var(--button-hover-color, #218838);
 }
 
-.answer {
-    display: none;
-    margin-top: 5px;
-    padding: 10px;
-    background: #e9ecef;
-    border-radius: 5px;
+/*===========================
+  Footer
+  =========================== */
+footer {
+    background-color: var(--footer-bg-color, #343a40);
+    color: var(--footer-text-color, white);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
-
+/* Reset default margins and paddings for all elements */
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Style inputs */
-input[type=text], select, textarea {
-width: 100%;
-padding: 12px;
-border: 1px solid #ccc;
-margin-top: 6px;
-margin-bottom: 16px;
-resize: vertical;
+/* Style for the main FAQ container */
+.faq-container {
+  max-width: 800px; /* Limit the width for better readability */
+  margin: 50px auto; /* Center the container and add vertical spacing */
+  padding: 20px;
+  font-family: 'Arial, sans-serif';
+  color: #333; /* Base text color */
 }
 
-input[type=submit] {
-background-color: #04AA6D;
-color: white;
-padding: 12px 20px;
-border: none;
-cursor: pointer;
+/* Style for the main title */
+.faq-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50; /* Dark blue color for the title */
 }
 
-input[type=submit]:hover {
-background-color: #45a049;
+/* Style for each FAQ item */
+.faq-item {
+  border-bottom: 1px solid #ddd; /* Light gray border between items */
+  overflow: hidden; /* Hide overflowing content */
 }
 
-/* Style the container/contact section */
-container {
-border-radius: 5px;
-background-color: #f2f2f2;
-padding: 10px;
+/* Style for the question buttons */
+.faq-question {
+  background-color: #ecf0f1; /* Light gray background */
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
 }
 
-/* Create two columns that float next to each other */
-column {
-float: left;
-width: 50%;
-margin-top: 6px;
-padding: 20px;
+/* Hover effect for question buttons */
+.faq-question:hover {
+  background-color: #d0d7de; /* Slightly darker gray on hover */
 }
 
-/* Clear floats after the columns */
-row:after {
-content: "";
-display: table;
-clear: both;
+/* Style for the arrow icon */
+.faq-question .arrow {
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease; /* Smooth rotation transition */
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-.column, input[type=submit] {
-width: 100%;
-margin-top: 0;
- }
+/* Rotate the arrow when the question is active (expanded) */
+.faq-question.active .arrow {
+  transform: rotate(180deg); /* Rotate arrow 180 degrees */
+}
+
+/* Style for the answer sections */
+.faq-answer {
+  max-height: 0; /* Initially hide the answer */
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth transition for expanding */
+  background-color: #fff; /* White background for answers */
+}
+
+/* Style for the answer text */
+.faq-answer p {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5; /* Increase line height for better readability */
+  color: #555; /* Slightly lighter text color for answers */
+}
+
+/* Harmonious color palette for the body background */
+body {
+  background-color: #f5f7fa; /* Very light blue-gray background */
 }
