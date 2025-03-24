@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Dog's Life - Home</title>
     <link rel="stylesheet" href="dogs.css">
+    <link rel="stylesheet" href="clock.css">
 </head>
 <body>
 
@@ -31,8 +32,8 @@
         <img src="OIP (3).jpg" alt="Happy fur patient with the Vet."  width="500" height="600">
         <img src="OIP (2).jpg" alt="Smiles all around on this visit." width="500" height="600">
     </div>
-
     <h1>Welcome to Dog Care 101</h1>
+
     <main>
         <!-- You can keep a brief intro here or remove it if you prefer -->
         <section id="intro">
@@ -78,9 +79,26 @@
                 referrerpolicy="strict-origin-when-cross-origin" 
                 allowfullscreen>
             </iframe>
+	<div class="clock-container"> 
+  		<div class="clock-col"> 
+    		<p class="clock-day clock-timer"></p> 
+    		<p class="clock-label">Day</p> 
+  	</div> 
+  	<div class="clock-col"> 
+    		<p class="clock-hours clock-timer"></p> 
+    		<p class="clock-label">Hours</p> 
+  	</div> 
+  	<div class="clock-col"> 
+    		<p class="clock-minutes clock-timer"></p> 
+    		<p class="clock-label">Minutes</p> 
+  	</div> 
+  	<div class="clock-col"> 
+    		<p class="clock-seconds clock-timer"></p> 
+    	<p class="clock-label">Seconds</p> 
+  	</div> 
+	
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 A Dog's Life. All rights reserved.</p>
     </footer>
@@ -106,6 +124,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> 
 
+	<script src="clock.js"></script>
 </body>
 </html>

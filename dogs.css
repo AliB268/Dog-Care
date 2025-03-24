@@ -1,20 +1,46 @@
 /*===========================
+  Root Variables (Optional Override)
+  =========================== */
+:root {
+    --page-bg-color: #1870ed;      /* Blue background */
+    --text-color: #f9f8ff;         /* Light text */
+    --header-bg-color: #0b0b0b;
+    --header-text-color: #f9f8ff;
+    --nav-link-color: #f9f8ff;
+    --nav-hover-color: #d4682e;
+    --heading-color: #ffffff;
+    --input-border-color: #896959;
+    --button-bg-color: #d4682e;
+    --button-hover-color: #896959;
+    --footer-bg-color: #121010;
+    --footer-text-color: #f9f8ff;
+}
+
+/*===========================
   General Styles
   =========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--page-bg-color, #f8f9fa); /* Placeholder for background color */
-    color: var(--text-color, #333); /* Placeholder for text color */
+    background-color: var(--page-bg-color); 
+    color: var(--text-color);
 }
 
+/*===========================
+  Header & Navigation
+  =========================== */
 header {
-    background-color: var(--header-bg-color, #007bff); /* Placeholder for header color */
-    color: var(--header-text-color, white);
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     padding: 20px;
     text-align: center;
-    position: relative;
 }
 
 nav ul {
@@ -30,12 +56,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--nav-link-color, white);
+    color: var(--nav-link-color);
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: var(--nav-hover-color, #ffc107);
+    color: var(--nav-hover-color);
 }
 
 /*===========================
@@ -47,7 +73,7 @@ main {
 }
 
 h1, h2, h3 {
-    color: var(--heading-color, #222);
+    color: var(--heading-color);
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
@@ -75,12 +101,12 @@ input, select, textarea {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
-    border: 1px solid var(#d4682e, #ccc);
+    border: 1px solid var(--input-border-color);
     border-radius: 4px;
 }
 
 input[type="submit"] {
-    background-color: var(--button-bg-color, #28a745);
+    background-color: var(--button-bg-color);
     color: white;
     border: none;
     padding: 12px;
@@ -89,96 +115,245 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: var(--button-hover-color, #218838);
+    background-color: var(--button-hover-color);
 }
 
 /*===========================
   Footer
   =========================== */
 footer {
-    background-color: var(--footer-bg-color, #343a40);
-    color: var(--footer-text-color, white);
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 15px;
     margin-top: 20px;
 }
-/* Reset default margins and paddings for all elements */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-/* Style for the main FAQ container */
+/*===========================
+  FAQ Section
+  =========================== */
 .faq-container {
-  max-width: 800px; /* Limit the width for better readability */
-  margin: 50px auto; /* Center the container and add vertical spacing */
-  padding: 20px;
-  font-family: 'Arial, sans-serif';
-  color: #333; /* Base text color */
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+    color: var(--text-color);
 }
 
-/* Style for the main title */
 .faq-container h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #2c3e50; /* Dark blue color for the title */
+    text-align: center;
+    margin-bottom: 40px;
+    color: #f9f8ff;
 }
 
-/* Style for each FAQ item */
 .faq-item {
-  border-bottom: 1px solid #ddd; /* Light gray border between items */
-  overflow: hidden; /* Hide overflowing content */
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
 }
 
-/* Style for the question buttons */
 .faq-question {
-  background-color: #ecf0f1; /* Light gray background */
-  width: 100%;
-  padding: 20px;
-  text-align: left;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+    background-color: #ecf0f1;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
 }
 
-/* Hover effect for question buttons */
 .faq-question:hover {
-  background-color: #d0d7de; /* Slightly darker gray on hover */
+    background-color: #d0d7de;
 }
 
-/* Style for the arrow icon */
 .faq-question .arrow {
-  position: absolute;
-  right: 20px;
-  transition: transform 0.3s ease; /* Smooth rotation transition */
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* Rotate the arrow when the question is active (expanded) */
 .faq-question.active .arrow {
-  transform: rotate(180deg); /* Rotate arrow 180 degrees */
+    transform: rotate(180deg);
 }
 
-/* Style for the answer sections */
 .faq-answer {
-  max-height: 0; /* Initially hide the answer */
-  overflow: hidden;
-  transition: max-height 0.3s ease; /* Smooth transition for expanding */
-  background-color: #fff; /* White background for answers */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
 }
 
-/* Style for the answer text */
 .faq-answer p {
-  padding: 20px;
-  font-size: 16px;
-  line-height: 1.5; /* Increase line height for better readability */
-  color: #555; /* Slightly lighter text color for answers */
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+/*===========================
+  Forms
+  =========================== */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    color: #121010;
 }
 
-/* Harmonious color palette for the body background */
+.form-container h2 {
+    margin-bottom: 20px;
+    color: var(--header-bg-color, #0b0b0b);
+}
+
+.form-container label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--input-border-color, #896959);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f8ff;
+    color: #121010;
+}
+
+.form-container input[type="submit"] {
+    background-color: var(--button-bg-color, #d4682e);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: var(--button-hover-color, #896959);
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+.clock {
+  &-day {
+    &:before {
+      content: var(--timer-day);
+    }
+  }
+  &-hours {
+    &:before {
+      content: var(--timer-hours);
+    }
+  }
+  &-minutes {
+    &:before {
+      content: var(--timer-minutes);
+    }
+  }
+  &-seconds {
+    &:before {
+      content: var(--timer-seconds);
+    }
+  }
+}
+
 body {
-  background-color: #f5f7fa; /* Very light blue-gray background */
+  background: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
+  font-family: 'Montserrat', 'sans-serif';
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  &-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #080808;
+    border-radius: 5px;
+    padding: 60px 20px;
+    box-shadow: 1px 1px 5px rgba(255,255,255,.15), 0 15px 90px 30px rgba(0,0,0,.25);
+    display: flex;
+  }
+  &-col {
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 40px;
+    min-width: 90px;
+    position: relative;
+    &:not(:last-child):before,
+    &:not(:last-child):after{
+      content: "";
+      background-color: rgba(255,255,255,.3);
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      right: -42px;
+    }
+    &:not(:last-child):before {
+      top: 35%;
+    }
+    &:not(:last-child):after {
+      top: 50%;
+    }
+  }
+  &-timer {
+    &:before {
+      color: #fff;
+      font-size: 4.2rem;
+      text-transform: uppercase;
+    }
+  }
+  &-label {
+    color: rgba(255,255,255,.35);
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 825px) {
+  .clock-container {
+  flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .clock-col {
+    & + & {
+      margin-top: 20px;
+    }
+    &:before,
+    &:after {
+      display: none!important;
+    }
+  }
 }
