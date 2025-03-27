@@ -145,6 +145,34 @@ h1, h2, h3 {
 .form-container input[type="submit"]:hover {
     background-color: var(--button-hover-color);
 }
+/*========================================================
+FAQs
+==========================================================*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
 
 /*===========================
   Footer
@@ -153,36 +181,36 @@ footer {
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin-top: 20px;
 }
 
 /*===========================
-  FAQ Section
-  =========================== */
+	FAQ Section
+ ===========================*/
 .faq-container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    font-family: 'Arial, sans-serif';
-    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
-.faq-container h1 {
+.faq-container h2 {
     text-align: center;
-    margin-bottom: 40px;
-    color: #f9f8ff;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
 }
 
 .faq-item {
-    border-bottom: 1px solid #ddd;
-    overflow: hidden;
+    padding: 20px;
 }
 
 .faq-question {
-    background-color: #ecf0f1;
+    background-color: #f9f9f9;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     text-align: left;
     font-size: 18px;
     border: none;
@@ -190,35 +218,41 @@ footer {
     cursor: pointer;
     position: relative;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 .faq-question:hover {
-    background-color: #d0d7de;
-}
-
-.faq-question .arrow {
-    position: absolute;
-    right: 20px;
-    transition: transform 0.3s ease;
+    background-color: #e1e1e1;
 }
 
 .faq-question.active .arrow {
     transform: rotate(180deg);
 }
 
+.arrow {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #fff;
+    transition: max-height 0.3s ease;    
+    margin-top: 10px;
+    padding: 0 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
 }
 
 .faq-answer p {
-    padding: 20px;
+    padding: 15px;
     font-size: 16px;
-    line-height: 1.5;
     color: #555;
+    line-height: 1.6;
 }
+
 
 /*===========================
   Clock Styles (merged from clock.css)

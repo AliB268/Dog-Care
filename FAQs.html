@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="dogs.css">
 </head>
 <body>
-	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <header>
         <h1 class="logo">Frequently Asked Questions</h1>
         <nav>
@@ -16,7 +17,7 @@
                 <li><a href="doggie-care.html">Doggie Care</a></li>
                 <li><a href="dogs-and-vets.html">Dogs and Vets</a></li>
                 <li><a href="feeding-time.html">Feeding Time</a></li>
-		<li><a href="training-and-walking.html">Training and Walking</a></li>
+                <li><a href="training-and-walking.html">Training and Walking</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="FAQs.html">FAQs</a></li>
             </ul>
@@ -24,80 +25,67 @@
     </header>
 
     <h1>Ask Away!</h1>
-    <div id="faq-container"></div>
 
-    <script src="faq.js"></script>
-	
-	
 <img src="E:\Modern Markup Languages\Project Folder\images\Images\Jones-1-1000x600.jpg" alt=" width="100" height="500">
 <img src="E:\Modern Markup Languages\Project Folder\images\Images\OIP (4).jpg" alt=" width="100" height="500">
- <div class="faq-container">
-        <h1>Frequently Asked Questions</h1>
-        <faqs>
-		<!-- Start of the Accordion -->
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
         <div class="faq-item">
-            <button class="faq-question">
-	<faq>
-               <question>Are dogs expensive?</question>
+            <button class="faq-question">Are dogs expensive?
                 <span class="arrow">&#9660;</span>
             </button>
             <div class="faq-answer">
-          <answer><p>Depends on the type of dog you want.It also depends on where you get your dog, adoption or breeder?</answer></p>
+                <p>Depends on the type of dog you want. It also depends on where you get your dog: adoption or breeder.</p>
             </div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">
-                <question>Can dog eat sweets?</question>
+            <button class="faq-question">Can dogs eat sweets?
                 <span class="arrow">&#9660;</span>
             </button>
             <div class="faq-answer">
-                <answer><p>No, it is not a good idea to give sweets to dogs. This will make them sick.</p></answer>
+                <p>No, it is not a good idea to give sweets to dogs. This will make them sick.</p>
             </div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">
-                <question>Do dogs dream?</question>
+            <button class="faq-question">Do dogs dream?
                 <span class="arrow">&#9660;</span>
             </button>
             <div class="faq-answer">
-                <answer><p>Yes, they do and they also make noises as if talking in their sleep.</answer></p>
-	</faq>
+                <p>Yes, they do and they also make noises as if talking in their sleep.</p>
             </div>
         </div>
-        <!-- End of the Accordion -->
     </div>
-	</faqs>
-    <!-- Link to the external JavaScript file -->
-    <script src="script.js"></script>
-</body>
-</html>
- 		<h2>Thank <em>you</em> for the visit. I hope we were able to help <em>you</em>. Please visit us again!</h3> 
-<footer>
+
+    <footer>
         <p>&copy; 2025 A Dog's Life. All rights reserved.</p>
     </footer>
-<script>
-// Get the button
-let mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    <script src="FAQs.js"></script>
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
 
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
